@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=h1, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Storrytelling Toolkit</h1>
+		</div>
+
+		<div class="container">
+			<h2 class="pb-2 border-bottom mb-5">Motiv</h2>
+			<div class="row row-cols-1 row-cols-md-2 my-5">
+				<div class="col">
+					<div id="thema-output"></div>
+				</div>
+				<div class="col">
+					<div id="elemente-output"></div>
+				</div>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 my-5">
+				<div class="col">
+					<div id="komposition-output"></div>
+				</div>
+				<div class="col">
+					<div id="szeneneinstellung-output"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2 class="pb-2 border-bottom mb-5">Bilddarstellung</h2>
+			<div id="stil-output"></div>
+		</div>
+
+		<div class="container">
+			<h2 class="pb-2 border-bottom mt-5">Output</h2>
+
+			<div class="mb-3">
+				<label for="output" class="form-label">Example textarea</label>
+				<textarea class="form-control" id="output" rows="3"></textarea>
+			</div>
+		</div>
+
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="data.js"></script>
+		<script src="main.js"></script>
+		<script>
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
+	</body>
+</html>

@@ -361,21 +361,12 @@ const data = {
 			],
 		},
 		{
-			name: 'Farbschema:',
-			children: [
-				{ name: 'Warme Herbstfarben', tag: ['natur'] },
-				{ name: 'Schwarz-Weiß' },
-				{ name: 'Pastelltöne' },
-				{ name: 'Leuchtende Neonfarben' },
-				{ name: 'kalte Farben' },
-				{ name: 'Abenddämmerung' },
-			],
-		},
-		{
 			name: 'Beleuchtung',
 			children: [
 				{
 					name: 'Richtung',
+					id: 'richtung-output',
+					class: 'btn btn-outline-info',
 					children: [
 						{ name: 'von oben' },
 						{ name: 'von unten' },
@@ -392,6 +383,8 @@ const data = {
 				},
 				{
 					name: 'Intensität',
+					id: 'intensitaet-output',
+					class: 'btn btn-outline-info',
 					children: [
 						{ name: 'Weiches Morgenlicht' },
 						{ name: 'Dramatisches Gegenlicht' },
@@ -408,6 +401,8 @@ const data = {
 				},
 				{
 					name: 'Farbe',
+					id: 'farbe-output',
+					class: 'btn btn-outline-info',
 					children: [
 						{ name: 'blau' },
 						{ name: 'silber' },
@@ -416,6 +411,12 @@ const data = {
 						{ name: 'neutral' },
 						{ name: 'bernstein' },
 						{ name: 'sepia' },
+						{ name: 'Warme Herbstfarben', tag: ['natur'] },
+						{ name: 'Schwarz-Weiß' },
+						{ name: 'Pastelltöne' },
+						{ name: 'Leuchtende Neonfarben' },
+						{ name: 'kalte Farben' },
+						{ name: 'Abenddämmerung' },
 					],
 				},
 			],

@@ -8,46 +8,181 @@
 		<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
 	</head>
 	<body>
-		<div class="container">
-			<h1>Storrytelling Toolkit</h1>
-		</div>
+		<nav class="navbar navbar-dark bg-dark fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Cheat Sheet zur Bilderstellung</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasDarkNavbar"
+					aria-controls="offcanvasDarkNavbar"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="offcanvas offcanvas-end text-bg-dark"
+					tabindex="-1"
+					id="offcanvasDarkNavbar"
+					aria-labelledby="offcanvasDarkNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Themen</h5>
+						<button
+							type="button"
+							class="btn-close btn-close-white"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#motiv">Motiv</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#stil">Stil</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#beleuchtung">Beleuchtung</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#farbstimmung">Farbstimmung</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#bearbeitung">Bearbeitung</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#creator">Künstler</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#sonstiges">Sobstiges</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
 
-		<div class="container">
-			<h2 class="pb-2 border-bottom mb-5">Motiv</h2>
-			<div class="row row-cols-1 row-cols-md-2 my-5">
-				<div class="col">
+		<!-- <div class="container">
+			<h1>Cheat Sheet zur Bilderstellung</h1>
+		</div> -->
+
+		<div class="container" id="motiv" style="padding-top: 100px">
+			<h2 class="pb-2 border-bottom mb-4">Motiv</h2>
+			<div class="row row-cols-1 row-cols-md-2 mb-4">
+				<div class="col my-2">
 					<div id="thema-output"></div>
 				</div>
-				<div class="col">
+				<div class="col my-2">
 					<div id="elemente-output"></div>
 				</div>
 			</div>
-			<div class="row row-cols-1 row-cols-md-2 my-5">
-				<div class="col">
+			<div class="row row-cols-1 row-cols-md-2 mb-4">
+				<div class="col my-2">
 					<div id="komposition-output"></div>
 				</div>
-				<div class="col">
+				<div class="col my-2">
 					<div id="szeneneinstellung-output"></div>
 				</div>
 			</div>
 		</div>
 
-		<div class="container">
-			<h2 class="pb-2 border-bottom mb-5">Bilddarstellung</h2>
+		<div class="container" id="stil">
+			<h2 class="pb-2 border-bottom mb-5">Stil</h2>
 			<div id="stil-output"></div>
 		</div>
 
-		<div class="container">
-			<h2 class="pb-2 border-bottom my-5">Beleuchung und Farbe</h2>
-			<div class="row row-col-1 row-cols-md-3 my-5">
+		<div class="container" id="beleuchtung">
+			<h2 class="pb-2 border-bottom my-5">Beleuchung</h2>
+			<div class="row row-cols-1 row-cols-md-2 my-5">
 				<div class="col">
 					<div id="richtung-output"></div>
 				</div>
 				<div class="col">
 					<div id="intensitaet-output"></div>
 				</div>
+			</div>
+		</div>
+
+		<div class="container" id="farbstimmung">
+			<h2 class="pb-2 border-bottom my-5">Farbstimmung</h2>
+			<div class="row row-cols-1 row-cols-md-3 my-5">
+				<div class="col">
+					<div id="stimmung-output"></div>
+				</div>
+				<div class="col">
+					<div id="ton-output"></div>
+				</div>
 				<div class="col">
 					<div id="farbe-output"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="bearbeitung">
+			<h2 class="pb-2 border-bottom my-5">Bearbeitung</h2>
+			<div class="row row-cols-1">
+				<div class="col">
+					<div id="deleteElement-output"></div>
+				</div>
+			</div>
+			<div class="row row-cols-1">
+				<div class="col">
+					<div id="addElement-output"></div>
+				</div>
+			</div>
+			<div class="row row-cols-1">
+				<div class="col">
+					<div id="scaleElement-output"></div>
+				</div>
+			</div>
+			<div class="row row-cols-1">
+				<div class="col">
+					<div id="overlayImage-output"></div>
+				</div>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 my-5">
+				<div class="col">
+					<div id="changeColor-output"></div>
+				</div>
+				<div class="col">
+					<div id="changeCompo-output"></div>
+				</div>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 my-5">
+				<div class="col">
+					<div id="changeTextures-output"></div>
+				</div>
+				<div class="col">
+					<div id="mergeElement-output"></div>
+				</div>
+			</div>
+			<div class="row row-cols-1">
+				<div class="col">
+					<div id="outpainting-output"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="creator">
+			<h2 class="pb-2 border-bottom my-5">Künstlerliste</h2>
+			<div class="row row-cols-1">
+				<div class="col">
+					<div id="creator-output"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="sonstiges">
+			<h2 class="pb-2 border-bottom my-5">sonstige Bildeigenschaften</h2>
+			<div class="row row-cols-1 row-cols-md-2">
+				<div class="col">
+					<div id="format-output"></div>
+				</div>
+				<div class="col">
+					<div id="material-output"></div>
 				</div>
 			</div>
 		</div>
@@ -60,6 +195,12 @@
 				<textarea class="form-control" id="output" rows="3"></textarea>
 			</div>
 		</div>
+
+		<footer class="py-1 py-md-5 mt-5 bg-body-tertiary">
+			<div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+				<div class="row">Scitotec GmbH</div>
+			</div>
+		</footer>
 
 		<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

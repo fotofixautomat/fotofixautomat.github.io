@@ -8,8 +8,9 @@ const data = {
 					name: 'Thema',
 					id: 'thema-output',
 					class: 'btn-outline-primary',
+					type: 'button',
 					children: [
-						{ name: 'Ein mittelalterliches Schloss' },
+						{ name: 'Ein mittelalterliches Schloss', description: 'Test' },
 						{ name: 'Ein futuristisches Raumschiff' },
 						{ name: 'Eine Landschaft mit Wasserfällen' },
 						{ name: 'Landschaft' },
@@ -31,6 +32,7 @@ const data = {
 					name: 'Elemente',
 					id: 'elemente-output',
 					class: 'btn-outline-primary',
+					type: 'button',
 					children: [
 						{ name: 'Bäume' },
 						{ name: 'Gebäude' },
@@ -51,9 +53,10 @@ const data = {
 					],
 				},
 				{
-					name: 'Komposition',
+					name: 'Komposition & Perspektive',
 					id: 'komposition-output',
 					class: 'btn-outline-primary',
+					type: 'button',
 					children: [
 						{ name: 'Nahaufnahme' },
 						{ name: 'Augenhöhe' },
@@ -91,6 +94,7 @@ const data = {
 					name: 'Szeneneinstellung',
 					id: 'szeneneinstellung-output',
 					class: 'btn-outline-primary',
+					type: 'button',
 					children: [
 						{ name: 'Dichte Nebelwälder' },
 						{ name: 'Eine pulsierende Großstadt' },
@@ -114,9 +118,10 @@ const data = {
 			],
 		},
 		{
-			name: 'Stil',
+			name: '',
 			id: 'stil-output',
 			class: 'btn-outline-secondary',
+			type: 'button',
 			children: [
 				{
 					name: 'Abstrakt',
@@ -140,7 +145,8 @@ const data = {
 				},
 				{
 					name: 'Bewegungsunschärfe',
-					description: 'Unscharfe Bilder - ICM',
+					description:
+						'CM (Intentional Camera Movement) bezeichnet eine Fototechnik, bei der durch bewusstes Bewegen der Kamera während einer längeren Belichtungszeit gezielt unscharfe, abstrakte Bilder entstehen.',
 				},
 				{
 					name: 'Boudoir',
@@ -173,7 +179,8 @@ const data = {
 				},
 				{
 					name: 'Dramatisch',
-					description: 'test',
+					description:
+						'Ein dramatisches Bild erzeugt starke Emotionen und Spannung durch Kontraste, Licht, Perspektive und ausdrucksstarke Motive.',
 				},
 				{
 					name: 'Drohnenfotografie',
@@ -197,7 +204,8 @@ const data = {
 				},
 				{
 					name: 'Fotorealistisch',
-					description: 'test',
+					description:
+						'beschreibt Bilder, die so detailgetreu und präzise dargestellt sind, dass sie wie echte Fotografien wirken',
 				},
 				{
 					name: 'Food-Fotografie',
@@ -242,7 +250,8 @@ const data = {
 				},
 				{
 					name: 'Langzeitbelichtung',
-					description: 'NaN',
+					description:
+						'ist eine Aufnahmetechnik, bei der der Verschluss der Kamera für eine längere Zeit geöffnet bleibt, um Bewegungen sichtbar zu machen oder Lichtspuren einzufangen',
 				},
 				{
 					name: 'Low-Key',
@@ -254,7 +263,8 @@ const data = {
 				},
 				{
 					name: 'Melancholisch',
-					description: 'NaN',
+					description:
+						'beschreibt einen Zustand der sanften Traurigkeit oder Nachdenklichkeit, oft verbunden mit Sehnsucht und stiller Wehmut',
 				},
 				{
 					name: 'Minimalistisch',
@@ -311,7 +321,8 @@ const data = {
 				},
 				{
 					name: 'Romantisch',
-					description: 'NaN',
+					description:
+						'beschreibt etwas, das Gefühle von Liebe, Sehnsucht oder Harmonie weckt und oft mit Schönheit, Zärtlichkeit oder idealisierten Vorstellungen verbunden ist.',
 				},
 				{
 					name: 'Schwarz-Weiß',
@@ -364,9 +375,10 @@ const data = {
 			name: 'Beleuchtung',
 			children: [
 				{
-					name: 'Richtung',
+					name: 'Richtung des Lichtes',
 					id: 'richtung-output',
 					class: 'btn btn-outline-info',
+					type: 'button',
 					children: [
 						{ name: 'von oben' },
 						{ name: 'von unten' },
@@ -382,9 +394,10 @@ const data = {
 					],
 				},
 				{
-					name: 'Intensität',
+					name: 'Lichtintensität',
 					id: 'intensitaet-output',
 					class: 'btn btn-outline-info',
+					type: 'button',
 					children: [
 						{ name: 'Weiches Morgenlicht' },
 						{ name: 'Dramatisches Gegenlicht' },
@@ -399,10 +412,52 @@ const data = {
 						{ name: 'hartes Licht' },
 					],
 				},
+			],
+		},
+		{
+			name: 'Farbpalette',
+			children: [
+				{
+					name: 'Stimmung',
+					id: 'stimmung-output',
+					class: 'btn btn-outline-success',
+					type: 'button',
+					children: [
+						{ name: 'hell' },
+						{ name: 'dunkel' },
+						{ name: 'kalt' },
+						{ name: 'warm' },
+						{ name: 'neutral' },
+						{ name: 'Friedlich und beruhigend' },
+						{ name: 'Düster und geheimnisvoll' },
+						{ name: 'Fröhlich und lebendig' },
+						{ name: 'Nostalgisch' },
+						{ name: 'dunkel und mystisch' },
+						{ name: 'düster' },
+						{ name: 'dramatisch' },
+						{ name: 'verspielt' },
+					],
+				},
+				{
+					name: 'Töne',
+					id: 'ton-output',
+					class: 'btn btn-outline-success',
+					type: 'button',
+					children: [
+						{ name: 'Pastell' },
+						{ name: 'Lebhaft' },
+						{ name: 'Gedämpft' },
+						{ name: 'Gesättigt' },
+						{ name: 'Entsättigt' },
+						{ name: 'Monochromatisch' },
+						{ name: 'Komplementär' },
+					],
+				},
 				{
 					name: 'Farbe',
 					id: 'farbe-output',
-					class: 'btn btn-outline-info',
+					class: 'btn btn-outline-success',
+					type: 'button',
 					children: [
 						{ name: 'blau' },
 						{ name: 'silber' },
@@ -422,59 +477,20 @@ const data = {
 			],
 		},
 		{
-			name: 'Farbpalette',
-			children: [
-				{
-					name: 'Dominante Farben',
-					children: [
-						{ name: 'Beige' },
-						{ name: 'Bronze' },
-						{ name: 'Grau' },
-						{ name: 'Blau' },
-						{ name: 'Rot' },
-						{ name: 'Scharz' },
-						{ name: 'Weiß' },
-					],
-				},
-				{
-					name: 'Akzentfarben',
-					children: [{ name: 'Gold' }, { name: 'Silber' }, { name: 'Weiß' }, { name: 'Schwarz' }, { name: 'Blau' }],
-				},
-				{
-					name: 'Stimmung',
-					children: [
-						{ name: 'hell' },
-						{ name: 'dunkelr' },
-						{ name: 'kalt' },
-						{ name: 'warm' },
-						{ name: 'neutral' },
-						{ name: 'erdige Töne' },
-						{ name: 'metallisch glänzend' },
-					],
-				},
-				{
-					name: 'Töne',
-					children: [
-						{ name: 'Pastell' },
-						{ name: 'Lebhaft' },
-						{ name: 'Gedämpft' },
-						{ name: 'Gesättigt' },
-						{ name: 'Entsättigt' },
-						{ name: 'Monochromatisch' },
-						{ name: 'Komplementär' },
-					],
-				},
-			],
-		},
-		{
 			name: 'Bildbearbeitungsaufforderungen',
 			children: [
 				{
-					name: 'Bereiche löschen',
+					name: 'Bereiche löschen wie z.B.',
+					id: 'deleteElement-output',
+					class: '',
+					type: 'text',
 					children: [{ name: 'Gebäude' }, { name: 'Menschen' }, { name: 'Fahrzeuge' }, { name: 'Schilder' }],
 				},
 				{
-					name: 'Neue Elemente hinzufügen',
+					name: 'Neue Elemente hinzufügen wie z.B.',
+					id: 'addElement-output',
+					class: '',
+					type: 'text',
 					children: [
 						{ name: 'Bäume' },
 						{ name: 'Tiere' },
@@ -493,6 +509,9 @@ const data = {
 				},
 				{
 					name: 'Bestehende Elemente skalieren',
+					id: 'scaleElement-output',
+					class: '',
+					type: 'text',
 					children: [
 						{ name: 'Gebäude verkleinern' },
 						{ name: 'Menschen vergößern' },
@@ -501,7 +520,23 @@ const data = {
 					],
 				},
 				{
+					name: 'Zusätzliche Bilder überlagern',
+					id: 'overlayImage-output',
+					class: '',
+					type: 'text',
+					children: [
+						{ name: 'Text' },
+						{ name: 'Karte' },
+						{ name: 'Effekte' },
+						{ name: 'Muster' },
+						{ name: 'Vintage-Filter' },
+					],
+				},
+				{
 					name: 'Farben ersetzen',
+					id: 'changeColor-output',
+					class: '',
+					type: 'list',
 					children: [
 						{ name: 'Grün in Herbstfarben ändern' },
 						{ name: 'Blau durch stürmisches Grau ersetzen' },
@@ -510,6 +545,9 @@ const data = {
 				},
 				{
 					name: 'Komposition anpassen',
+					id: 'changeCompo-output',
+					class: '',
+					type: 'list',
 					children: [
 						{ name: 'Elemente neu positionieren' },
 						{ name: 'Horizontal oder vertikal ausrichten' },
@@ -521,6 +559,9 @@ const data = {
 				},
 				{
 					name: 'Texturen ändern',
+					id: 'changeTextures-output',
+					class: '',
+					type: 'list',
 					children: [
 						{ name: 'Wasser glätten' },
 						{ name: 'Gelände aufraue' },
@@ -531,6 +572,9 @@ const data = {
 				},
 				{
 					name: 'Elemente mischen',
+					id: 'mergeElement-output',
+					class: '',
+					type: 'list',
 					children: [
 						{ name: 'Himmel mit Horizont mischen' },
 						{ name: 'Schatten mit Gelände verbinden' },
@@ -540,6 +584,9 @@ const data = {
 				},
 				{
 					name: 'Outpainting',
+					id: 'outpainting-output',
+					class: '',
+					type: 'list',
 					children: [
 						{ name: 'Himmel nach oben erweitern' },
 						{ name: 'Wald nach außen vergrößern' },
@@ -548,52 +595,210 @@ const data = {
 						{ name: 'Feld seitlich dehnen' },
 					],
 				},
-				{
-					name: 'Zusätzliche Bilder überlagern',
-					children: [
-						{ name: 'Text' },
-						{ name: 'Karte' },
-						{ name: 'Effekte' },
-						{ name: 'Muster' },
-						{ name: 'Vintage-Filter' },
-					],
-				},
-			],
-		},
-		{
-			name: 'Emotion/Stimmung',
-			children: [
-				{ name: 'Friedlich und beruhigend' },
-				{ name: 'Düster und geheimnisvoll' },
-				{ name: 'Fröhlich und lebendig' },
-				{ name: 'Nostalgisch' },
-				{ name: 'dunkel und mystisch' },
-				{ name: 'düster' },
-				{ name: 'dramatisch' },
-				{ name: 'verspielt' },
 			],
 		},
 		{
 			name: 'Künstler/Inspiration',
-			children: [{ name: 'Walt Disney' }, { name: 'Bansky' }, { name: 'Picasso' }],
+			id: 'creator-output',
+			class: '',
+			type: 'link',
+			children: [
+				{
+					name: 'Walt Disney',
+					description: 'Cartoon, handgezeichneter Animationsstil',
+					link: 'https://www.catawiki.com/nl/l/66533137-walt-disney-studios-disney-kunstwerk-framed-original-animation-drawing-additional-book-building-a-building',
+				},
+				{
+					name: 'Banksy',
+					description: 'Street Art, Schablonen-Graffiti, gesellschaftskritisch',
+					link: 'https://www.singulart.com/de/blog/2023/11/17/beruehmte-banksy-gemaelde/',
+				},
+				{
+					name: 'Pablo Picasso',
+					description: 'Kubismus, abstrakte Formen, geometrische Darstellung',
+					link: 'https://themuseum.blog/de/10-kunstwerke-von-picasso-die-sie-kennen-sollten/',
+				},
+				{
+					name: 'Vincent van Gogh',
+					description: 'Post-Impressionismus, expressive Pinselstriche, Farben',
+					link: 'https://www.nga.gov/collection/highlights/van-gogh-self-portrait.html',
+				},
+				{
+					name: 'Claude Monet',
+					description: 'Impressionismus, Licht- und Farbenspiele',
+					link: 'https://www.arthistoryproject.com/artists/claude-monet/sunset-on-the-seine-at-lavacourt-winter-effect/',
+				},
+				{
+					name: 'Leonardo da Vinci',
+					description: 'Renaissance, realistisches Zeichnen, sfumato-Technik',
+					link: 'https://www.singulart.com/de/blog/2023/11/02/leonardo-da-vinci-gemaelde/',
+				},
+				{
+					name: 'Salvador Dalí',
+					description: 'Surrealismus, traumartige, verzerrte Bilder',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Frida Kahlo',
+					description: 'Surrealismus, Selbstporträts, mexikanische Symbolik',
+					link: 'https://www.kunstnet.org/werk/509693-frida-kahlo',
+				},
+				{
+					name: 'Andy Warhol',
+					description: 'Pop Art, Massenproduktion, Konsumkultur',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Jackson Pollock',
+					description: 'Action Painting, Drip-Technik, abstrakter Expressionismus',
+					link: 'https://www.artdex.com/myth-genius-jackson-pollock/',
+				},
+				{
+					name: 'Keith Haring',
+					description: 'Street Art, einfache Linien, lebendige Farben',
+					link: 'https://www.npr.org/2023/05/27/1178084648/keith-haring-radiant-baby-the-broad',
+				},
+				{
+					name: 'Henri Matisse',
+					description: 'Fauvismus, kräftige Farben, vereinfachte Formen',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Gustav Klimt',
+					description: 'Jugendstil, goldene Ornamente, dekorative Elemente',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Edvard Munch',
+					description: 'Expressionismus, düstere Farben, emotionale Themen',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Hokusai',
+					description: 'Japanische Ukiyo-e Kunst, Holzschnitte, „Die große Welle“',
+					link: 'https://www.alamy.de/die-grosse-welle-von-kanagawa-katsushika-hokusai-1831-holzschnitt-drucken-aka-der-wave-japanische-kunst-image235761420.html',
+				},
+				{
+					name: 'Yayoi Kusama',
+					description: 'Avantgarde, psychedelische Punkte, Installationen',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Joan Miró',
+					description: 'Surrealismus, abstrakte Formen, kindliche Symbole',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Albrecht Dürer',
+					description: 'Renaissance, realistische Druckgrafik und Holzschnitte',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+				{
+					name: 'Jean-Michel Basquiat',
+					description: 'Neoexpressionismus, Graffiti-Einflüsse, rohe Energie',
+					link: 'https://artlia.de/blogs/wandbilder-digest/die-20-beruhmtesten-maler-der-kunstgeschichte',
+				},
+			],
 		},
 		{
 			name: 'Format/Dimensionen',
+			description: 'Überlegen SIe sich, wie das Bildformat sein soll.',
+			id: 'format-output',
+			class: 'btn btn-outline-info',
+			type: 'button',
 			children: [
 				{ name: 'Quadratisch (1:1)' },
 				{ name: 'Panorama (16:9)' },
 				{ name: 'Hochformat (3:4)' },
 				{ name: 'Querformat (4:3)' },
+				{ name: 'HD (1280 × 720 Pixel)' },
+				{ name: 'Full HD (1920 × 1080 Pixel)' },
+				{ name: '4K (3840 × 2160 Pixel)' },
+				{ name: 'Instagram-Post (1080 × 1080)' },
+				{ name: 'Facebook-Cover (820 × 312 Pixel)' },
+				{ name: 'YouTube Thumbnail (1280 × 720 Pixel)' },
+				{ name: 'LinkedIn Post (1200 × 627 Pixel)' },
+				{ name: 'iPhone 15 Pro (2556 × 1179 Pixel)' },
+				{ name: 'iPad Pro 12.9“ (2732 × 2048 Pixel)' },
 			],
 		},
 		{
 			name: 'Medium/Material',
+			description: 'Geben Sie das Material bzw. die Art des Bildes an.',
+			id: 'material-output',
+			class: 'btn btn-outline-info',
+			type: 'button',
 			children: [
-				{ name: 'Aquarell' },
-				{ name: 'Kohlezeichnung' },
-				{ name: 'Digitale Illustration' },
-				{ name: 'Öl auf Leinwand' },
-				{ name: 'Fotografie' },
+				{ name: 'Fotografie', description: 'Erstellung von Bildern durch Licht auf einem lichtempfindlichen Medium.' },
+				{
+					name: '\u00d6l auf Leinwand',
+					description: 'Maltechnik mit \u00d6lfarben auf einer Leinwand als Trägermaterial.',
+				},
+				{
+					name: 'Digitale Illustration',
+					description: 'Erstellung von Kunstwerken mit digitalen Werkzeugen wie Tablets und Software.',
+				},
+				{
+					name: 'Kohlezeichnung',
+					description: 'Zeichnungen mit Kohle auf Papier, oft für Skizzen oder Schatteneffekte.',
+				},
+				{ name: 'Aquarell', description: 'Malerei mit transparenten Wasserfarben auf speziellem Aquarellpapier.' },
+				{ name: 'Pastellkreide', description: 'Zeichnungen mit weichen, farbintensiven Kreiden auf rauem Papier.' },
+				{
+					name: 'Bleistiftzeichnung',
+					description: 'Klassische Zeichnung oder Skizze mit Bleistift in unterschiedlichen Härtegraden.',
+				},
+				{
+					name: 'Tuschezeichnung',
+					description: 'Klare Linien und Schraffuren mit Tinte, oft für detailreiche Arbeiten verwendet.',
+				},
+				{
+					name: 'Gouache',
+					description: 'Deckende Wasserfarben, die kräftiger als Aquarell sind und leuchtend wirken.',
+				},
+				{
+					name: 'Acrylmalerei',
+					description: 'Schnelltrocknende Farben, die vielseitig auf unterschiedlichen Oberflächen angewendet werden.',
+				},
+				{
+					name: 'Collage',
+					description: 'Kunstwerke aus der Kombination von Papier, Fotos, Textilien und weiteren Materialien.',
+				},
+				{ name: 'Enkaustik', description: 'Maltechnik mit heißem Wachs und Farbpigmenten, meist auf Holzplatten.' },
+				{
+					name: 'Linolschnitt / Holzschnitt',
+					description: 'Drucktechnik, bei der Motive aus Linoleum oder Holz geschnitten und gedruckt werden.',
+				},
+				{
+					name: 'Spray-Art (Graffiti)',
+					description: 'Bilder, die mit Sprayfarben auf Wänden, Leinwänden oder anderen Flächen entstehen.',
+				},
+				{
+					name: 'Digital Painting',
+					description: 'Digitale Malerei mit Software wie Photoshop oder Procreate und speziellen Pinseln.',
+				},
+				{
+					name: 'Mischtechnik (Mixed Media)',
+					description: 'Kombination verschiedener Materialien und Techniken in einem Kunstwerk.',
+				},
+				{
+					name: 'Airbrush',
+					description: 'Präziser Farbauftrag mit einer Spritzpistole für glatte Verlaufe und Details.',
+				},
+				{
+					name: 'Kalligrafie',
+					description: 'Kunstvolle Gestaltung von Schriftzeichen, oft kombiniert mit Zeichnungen.',
+				},
+				{ name: 'Sandkunst', description: 'Bilder oder Installationen, die durch die Verwendung von Sand entstehen.' },
+				{
+					name: 'Wachsfarben (Crayon)',
+					description: 'Zeichnungen mit Wachsmalstiften, die farbintensiv und leicht zu verwenden sind.',
+				},
+				{ name: 'Metallgravur', description: 'Gravur von Bildern oder Mustern in Metall wie Kupfer oder Silber.' },
+				{
+					name: 'Glasmalerei',
+					description: 'Farben und Bilder, die auf Glas angebracht oder in Glas integriert werden.',
+				},
 			],
 		},
 	],

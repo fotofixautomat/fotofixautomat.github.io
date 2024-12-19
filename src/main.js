@@ -105,7 +105,7 @@ function addButtonList(div, child) {
 		// console.log(child)
 		const button = document.createElement('button')
 		button.textContent = subChild.name
-		button.className = 'btn btn-sm m-1 ' + child.class
+		button.className = 'btn btn-sm m-1 btn-outline-secondary'
 		button.setAttribute('type', 'button')
 		button.setAttribute('style', '--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;')
 
@@ -122,19 +122,79 @@ function addButtonList(div, child) {
 
 renderDataToHTML(data)
 
+/** Thema Button */
+// Funktion, die die Daten ins Ziel-Element schreibt
+function displayDetails(themeName) {
+	// Ziel-Div für die Ausgabe
+	const targetDiv = document.querySelector('#thema-elements')
+	const searchResult = searchByName(data, themeName)
+
+	if (searchResult) {
+		console.log(searchResult)
+		targetDiv.innerHTML = `
+			<h4>Typische Elements:</h4>
+            <ul>
+                ${searchResult.typical.map((el) => `<li>${el}</li>`).join('')}
+            </ul>
+            <h4>Untypische Elements:</h4>
+            <ul>
+                ${searchResult.untypical.map((el) => `<li>${el}</li>`).join('')}
+            </ul>
+		`
+	}
+}
+
+// Event-Listener zu den Buttons hinzufügen
+document.querySelectorAll('#thema-output .btn').forEach((button) => {
+	button.addEventListener('click', () => {
+		const themeName = button.textContent // Button-Text ist der Name des Themas
+		displayDetails(themeName)
+	})
+})
+
+function searchByName(data, targetName) {
+	let result = null
+
+	function recursiveSearch(node) {
+		if (node.name === targetName) {
+			result = node
+			return
+		}
+
+		// Falls das Knotenobjekt Kinder hat, diese rekursiv durchsuchen
+		if (node.children) {
+			for (let child of node.children) {
+				recursiveSearch(child)
+				if (result) return // Wenn Ergebnis gefunden, Abbruch
+			}
+		}
+	}
+
+	recursiveSearch(data)
+
+	if (result && result.typicalElements && result.untypicalElements) {
+		return {
+			typical: result.typicalElements,
+			untypical: result.untypicalElements,
+		}
+	}
+
+	return `Element mit dem Namen "${targetName}" nicht gefunden oder keine entsprechenden Elemente verfügbar.`
+}
+
 /**
  * Textbausteine kopieren
  */
 // Alle Buttons auswählen
-const buttons = document.querySelectorAll('.btn')
+// const buttons = document.querySelectorAll('.btn')
 
 // Textarea auswählen
-const textarea = document.getElementById('output')
+// const textarea = document.getElementById('output')
 
 // Event-Listener für alle Buttons hinzufügen
-buttons.forEach((button) => {
-	button.addEventListener('click', () => {
-		const buttonText = button.textContent.trim() // Button-Text holen und trimmen
-		textarea.value += (textarea.value ? '\n' : '') + buttonText // Text in die Textarea schreiben
-	})
-})
+// buttons.forEach((button) => {
+// 	button.addEventListener('click', () => {
+// 		const buttonText = button.textContent.trim() // Button-Text holen und trimmen
+// 		textarea.value += (textarea.value ? '\n' : '') + buttonText // Text in die Textarea schreiben
+// 	})
+// })

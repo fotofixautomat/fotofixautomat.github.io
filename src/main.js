@@ -122,7 +122,10 @@ function addButtonList(div, child) {
 
 renderDataToHTML(data)
 
-/** Thema Button */
+/**
+ * Darstellung von weiteren Details zum Motiv-Thema
+ * */
+
 // Funktion, die die Daten ins Ziel-Element schreibt
 function displayDetails(themeName) {
 	// Ziel-Div für die Ausgabe
